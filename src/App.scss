@@ -1,0 +1,51 @@
+@import "./sass/global";
+@import "./sass/variables";
+@import "./sass/typography";
+@import "./sass/mixins";
+
+::-webkit-scrollbar {
+  width: 0.4em;
+  background-color: $color-footer;
+
+  &-thumb {
+    background-color: $color-text;
+  }
+}
+
+.gradient__bg {
+  @include radial;
+}
+
+.gradient__text {
+  background: $gradient-text;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.section__padding {
+  padding: 4rem 6rem;
+}
+
+.section__margin {
+  margin: 4rem 6rem;
+}
+
+@media screen and (max-width: 700px) {
+  .section__padding {
+    padding: 4rem;
+  }
+  .section__margin {
+    margin: 4rem 2rem;
+    padding: 4rem;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .section__padding {
+    padding: 4rem 2rem;
+  }
+  .section__margin {
+    padding: 4rem 2rem;
+  }
+}
